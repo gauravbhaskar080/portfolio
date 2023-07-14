@@ -23,6 +23,7 @@ import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
+
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
@@ -36,8 +37,8 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import me from '../assets/me.png';
 import mylogo from '../assets/mylogo.png';
-import gaurav from '../assets/gaurav.png';
-import gb from '../assets/gb.png';
+import gaurav from '../assets/port-gb.png';
+
 
 export default {
   email,
