@@ -16,7 +16,7 @@ const SocialMedia = () => {
         </a>
       </div>
       <div>
-        <a href="" target="_blank">
+        <a href="https://gauravb123.netlify.app/" target="_blank">
           <BsPerson />
         </a>
       </div>
