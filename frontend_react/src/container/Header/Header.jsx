@@ -2,7 +2,7 @@ import React from 'react'
 import {motion} from 'framer-motion';
 
 import {AppWrap} from '../../wrapper';
-import {images} from '../../constants';
+import images from '../../constants/images';
 import './Header.scss';
 
 const scaleVariants = {
@@ -46,7 +46,7 @@ const Header = () => {
         transition = {{duration:0.5,delayChildren:0.5}}
         className= "app__header-img"
       >
-        <img src={images.gaurav} alt='profile_bg' />
+        <img src={images.gauravbhaskar} alt='profile_bg' />
         <motion.img
            whileInView={{scale:[0,1]}}
            transition = {{duration : 1, ease : 'easeInOut'}}

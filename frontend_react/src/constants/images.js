@@ -37,7 +37,7 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import me from '../assets/me.png';
 import mylogo from '../assets/mylogo.png';
-import gaurav from '../assets/port-gb.png';
+import gauravbhaskar from '../assets/profile2.png';
 
 
 export default {
@@ -76,5 +76,5 @@ export default {
   spotify,
   me,
   mylogo,
-  gaurav
+  gauravbhaskar
 };
