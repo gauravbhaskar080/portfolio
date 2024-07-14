@@ -61,7 +61,7 @@ const Certificates = () => {
       </h2>
 
       <div className="app__certificate-filter">
-        {["All", "Internship", "Hacktoberfest", "GCCP", "Extra-Curricular", "Workshop"].map(
+        {["Internship", "Technical","Hacktoberfest", "GCCP", "Extra-Curricular", "Workshop", "All"].map(
           (item, index) => (
             <div
               key={index}
