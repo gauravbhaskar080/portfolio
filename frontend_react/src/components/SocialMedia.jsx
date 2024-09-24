@@ -8,7 +8,7 @@ const SocialMedia = () => {
   return (
     <div className="app__social">
       <div>
-        <a href="https://drive.google.com/file/d/16t_vnf2WClcbPkGqbDfiJAOf4W96U8KX/view?usp=sharing" target="_blank">
+        <a href="https://drive.google.com/file/d/1sfRRG6g1wxs1F2dKzLgkPOXcPZ7xdfVD/view?usp=sharing" target="_blank">
           <TbFileCv />
         </a>
       </div>
@@ -28,7 +28,7 @@ const SocialMedia = () => {
         </a>
       </div>
       <div>
-        <a href="https://gauravb080.netlify.app/" target="_blank">
+        <a href="https://gauravb-portfolio.vercel.app" target="_blank">
           <BsPerson />
         </a>
       </div>

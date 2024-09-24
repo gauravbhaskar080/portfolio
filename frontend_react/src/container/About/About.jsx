@@ -15,6 +15,13 @@ const About = () => {
     client.fetch(query).then((data) => setAbouts(data));
   }, []);
 
+  const links = [
+    "https://gb-codex.vercel.app/",
+    "https://blog-post-awhd.onrender.com/",
+    "https://carehub-ten.vercel.app/",
+    "https://gb-gapshap.vercel.app/",
+  ];
+
   return (
     <>
       <h2 className="head-text">
@@ -30,7 +37,15 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
+            <a
+              href={links[index]}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={index}
+            >
+              <img src={urlFor(about.imgUrl)} alt={about.title} />
+            </a>
+
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
@@ -45,7 +60,7 @@ const About = () => {
 };
 
 export default AppWrap(
-  MotionWrap(About, 'app__about'),
+  MotionWrap(About, "app__about"),
   "about",
   "app__whitebg"
 );
