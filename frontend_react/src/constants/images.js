@@ -37,7 +37,8 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import me from '../assets/me.png';
 import mylogo from '../assets/mylogo.png';
-import gauravbhaskar from '../assets/profile2.png';
+// import gauravbhaskar from '../assets/profile2.png';
+import gauravbhaskar from '../assets/port-gb.png';
 
 
 export default {
