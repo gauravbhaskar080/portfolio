@@ -18,7 +18,7 @@ const About = () => {
   const links = [
     "https://gb-codex.vercel.app/",
     "https://blog-post-awhd.onrender.com/",
-    "https://carehub-ten.vercel.app/",
+    "https://gb-carehub.vercel.app/",
     "https://gb-gapshap.vercel.app/",
   ];
 

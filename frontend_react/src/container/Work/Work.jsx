@@ -11,6 +11,8 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
+  const [visibleWork, setVisibleWork] = useState(6);
+  const [loadMoreButton, setLoadMoreButton] = useState(true);
 
   useEffect(() => {
     const query = '*[_type == "works"]';
@@ -21,6 +23,22 @@ const Work = () => {
     });
   }, []);
 
+  useEffect(() => {
+    if (activeFilter === "All") {
+      setFilterWork(works.slice(0, visibleWork));
+      setLoadMoreButton(visibleWork < works.length);
+    } else {
+      setFilterWork(
+        works.filter((work) => work.tags && work.tags.includes(activeFilter))
+      );
+      setLoadMoreButton(false);
+    }
+  }, [works, activeFilter, visibleWork]);
+
+  const handleLoadMore = () => {
+    setVisibleWork((prevCount) => prevCount + 6);
+  };
+
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
     setAnimateCard([{ y: 100, opacity: 0 }]);
@@ -29,9 +47,13 @@ const Work = () => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
       if (item === "All") {
-        setFilterWork(works);
+        setFilterWork(works.slice(0, visibleWork));
+        setLoadMoreButton(visibleWork < works.length);
       } else {
-        setFilterWork(works.filter((work) => work.tags && work.tags.includes(item)));
+        setFilterWork(
+          works.filter((work) => work.tags && work.tags.includes(item))
+        );
+        setLoadMoreButton(false);
       }
     }, 500);
   };
@@ -115,6 +137,12 @@ const Work = () => {
           </div>
         ))}
       </motion.div>
+
+      {loadMoreButton && (
+        <div className="load-more-button app__flex">
+          <button onClick={handleLoadMore}>Load More</button>
+        </div>
+      )}
     </>
   );
 };

@@ -47,6 +47,7 @@
 
     .app__work-item{
         width: 270px;
+        height: 420px;
         flex-direction: column;
 
         margin: 2rem;
@@ -142,3 +143,30 @@
         top: -25px;
     }
 }
+
+.load-more-button {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    button {
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      background-color: #fff;
+      color: #000;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background-color: var(--secondary-color);
+        color: #fff;
+      }
+  
+      @media screen and (min-width: 2000px) {
+        padding: 1rem 2rem;
+        border-radius: 0.85rem;
+      }
+    }
+  }
